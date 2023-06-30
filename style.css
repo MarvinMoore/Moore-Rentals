@@ -2,6 +2,12 @@
     padding-left: 4px;		
     padding-right: 2.5px;
 }
+.heading{
+    font-size: 14px;
+}
+.subheading{
+    font-size: 10px;
+}
 .centered3{
     padding-top: 125px;	
     padding-right: 50px;
