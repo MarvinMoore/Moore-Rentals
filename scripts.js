@@ -1,6 +1,7 @@
+var makeSelect = document.getElementById("makeSelect");
+var modelSelect = document.getElementById("modelSelect");
+var searchButton1 = document.getElementById('searchButton');
 function updateModelOptions() {
-    var makeSelect = document.getElementById("makeSelect");
-    var modelSelect = document.getElementById("modelSelect");
     var selectedMake = makeSelect.value;
     
     // Reset the model options
@@ -28,3 +29,39 @@ function updateModelOptions() {
       selectElement.add(option);
     }
   }
+
+
+// Add an event listener to the search button
+searchButton1.addEventListener('click', () => {
+  // Get the selected values
+  const make = makeSelect.value;
+  const model = modelSelect.value;
+  const pickupLocation = document.getElementById('pickupLocationSelect').value;
+
+  // Create the payload object
+  const payload = {
+    make: make,
+    model: model,
+    location: pickupLocation
+  };
+  console.log(payload)
+  const queryString = new URLSearchParams(payload).toString();
+  // Send the POST request
+  fetch(`http://127.0.0.1:5000/cars?${queryString}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams(payload)
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response
+      console.log(data);
+      // Perform any necessary actions with the response data
+    })
+    .catch(error => {
+      // Handle errors
+      console.error(error);
+    });
+});
