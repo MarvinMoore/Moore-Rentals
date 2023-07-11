@@ -32,7 +32,7 @@ function updateModelOptions() {
 
 
 // Add an event listener to the search button
-searchButton1.addEventListener('click', () => {
+  searchButton1.addEventListener('click', () => {
   // Get the selected values
   const make = makeSelect.value;
   const model = modelSelect.value;
@@ -57,11 +57,48 @@ searchButton1.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
       // Handle the response
-      console.log(data);
-      // Perform any necessary actions with the response data
+      console.log(data)
+      const carResult = document.getElementById('carResult');
+      carResult.innerHTML = ''; // Clear previous results
+      if (data.message === 'No Cars Available') {
+        // No car is found, display "No Cars Available" in red
+        carResult.innerHTML = '<p style="color: red;">No Cars Available</p>';
+      } else {
+        var carData = JSON.parse(data.car);
+        var imgPath = carData.Img;
+
+        if (carData) {
+          const carElement = document.createElement('div');
+          carElement.classList.add('car-item');
+
+          const imageElement = document.createElement('img');
+          imageElement.src = imgPath;
+          imageElement.height = 150;
+          imageElement.width = 200;
+          // Set the image source based on the car model
+
+          const availabilityElement = document.createElement('p');
+          availabilityElement.innerText = carData.IsFree === 'yes' ? 'Available' : 'Not Available';
+          availabilityElement.style.color = carData.IsFree === 'yes' ? 'green' : 'red';
+
+          carElement.appendChild(imageElement);
+          carElement.appendChild(availabilityElement);
+          carResult.appendChild(carElement);
+        } else {
+          // Handle case when no car is available
+          const noCarsElement = document.createElement('p');
+          noCarsElement.innerText = 'No Car Available';
+          noCarsElement.style.color = 'red';
+          carResult.appendChild(noCarsElement);
+        }
+      }
     })
     .catch(error => {
       // Handle errors
       console.error(error);
+      const noCarsElement = document.createElement('p');
+      noCarsElement.innerText = 'No Car Available';
+      noCarsElement.style.color = 'red';
+      carResult.appendChild(noCarsElement);
     });
 });
