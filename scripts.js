@@ -95,6 +95,7 @@ function updateModelOptions() {
     })
     .catch(error => {
       // Handle errors
+      carResult.innerHTML = ''; // Clear previous results
       console.error(error);
       const noCarsElement = document.createElement('p');
       noCarsElement.innerText = 'No Car Available';
