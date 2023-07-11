@@ -21,7 +21,7 @@ database = 'Cars'
 def get_connection():
     return create_engine(
         #url='mssql+pyodbc://DESKTOP-HOOIOSE/Cars?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server'
-        url=f'mysql://{user}:{password}@{host}/{database}'
+        url=f'mysql+pymysql://{user}:{password}@{host}/{database}'
     )
 def check_car_availability(make, model):
     try:
