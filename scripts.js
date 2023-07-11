@@ -47,7 +47,7 @@ function updateModelOptions() {
   console.log(payload)
   const queryString = new URLSearchParams(payload).toString();
   // Send the POST request
-  fetch(`http://127.0.0.1:5000/cars?${queryString}`, {
+  fetch(`http://3.134.106.31:5000/cars?${queryString}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'

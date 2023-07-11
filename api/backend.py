@@ -13,10 +13,15 @@ api = Api(app)
 # Enable CORS for all routes
 CORS(app)
 
+user = 'root'
+password = 'Burner654!'
+host = 'localhost'
+database = 'Cars'
 
 def get_connection():
     return create_engine(
-        url='mssql+pyodbc://DESKTOP-HOOIOSE/Cars?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server'
+        #url='mssql+pyodbc://DESKTOP-HOOIOSE/Cars?trusted_connection=yes&driver=ODBC+Driver+17+for+SQL+Server'
+        url=f'mysql://{user}:{password}@{host}/{database}'
     )
 def check_car_availability(make, model):
     try:
@@ -54,4 +59,4 @@ class Cars(Resource):
 api.add_resource(Cars, '/cars')  # '/users' is our entry point
 
 if __name__ == '__main__':
-    app.run()  # run our Flask app
+    app.run(host='0.0.0.0', port=5000)  # run our Flask app
