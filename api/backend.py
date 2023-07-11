@@ -7,12 +7,14 @@ import pyodbc
 import sqlalchemy as sal
 from sqlalchemy import create_engine, text, select, Table, Column, Integer, String, MetaData
 from flask_cors import CORS
+from flask_sslify import SSLify
 app = Flask(__name__)
+sslify = SSLify(app)
 api = Api(app)
 
 # Enable CORS for all routes
 CORS(app)
-
+CORS(app, origins='https://ec2-3-134-106-31.us-east-2.compute.amazonaws.com', allow_headers=['Content-Type'])
 user = 'root'
 password = 'Burner654!'
 host = 'localhost'
