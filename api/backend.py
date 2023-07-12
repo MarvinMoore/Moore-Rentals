@@ -59,6 +59,4 @@ class Cars(Resource):
 api.add_resource(Cars, '/cars')  # '/users' is our entry point
 
 if __name__ == '__main__':
-    re = check_car_availability('Acura', 'TLX')
-    print(re)
     app.run(host='0.0.0.0', port=5000)  # run our Flask app
