@@ -9,15 +9,14 @@ from sqlalchemy import create_engine, text, select, Table, Column, Integer, Stri
 from flask_cors import CORS
 from flask_sslify import SSLify
 app = Flask(__name__)
-sslify = SSLify(app)
+#sslify = SSLify(app)
 api = Api(app)
 
 # Enable CORS for all routes
 CORS(app)
-CORS(app, origins='https://ec2-3-134-106-31.us-east-2.compute.amazonaws.com', allow_headers=['Content-Type'])
-user = 'root'
-password = 'Burner654!'
-host = 'localhost'
+user = 'kryp1'
+password = 'KrypMan1!'
+host = 'ec2-18-119-135-140.us-east-2.compute.amazonaws.com'
 database = 'Cars'
 
 def get_connection():
@@ -61,4 +60,6 @@ class Cars(Resource):
 api.add_resource(Cars, '/cars')  # '/users' is our entry point
 
 if __name__ == '__main__':
+    re = check_car_availability('Acura', 'TLX')
+    print(re)
     app.run(host='0.0.0.0', port=5000)  # run our Flask app

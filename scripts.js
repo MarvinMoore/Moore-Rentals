@@ -47,7 +47,7 @@ function updateModelOptions() {
   console.log(payload)
   const queryString = new URLSearchParams(payload).toString();
   // Send the POST request
-  fetch(`https://ec2-3-134-106-31.us-east-2.compute.amazonaws.com/cars?${queryString}`, {
+  fetch(`https://KrypticsDaddy.pythonanywhere.com/cars?${queryString}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
