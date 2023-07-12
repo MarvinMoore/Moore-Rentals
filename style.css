@@ -3,16 +3,17 @@
     padding-right: 2.5px;
 }
 .heading{
-    font-size: 18px;
+    font-size: 22px;
 }
 .subheading{
-    font-size: 14px;
+    font-size: 18px;
 }
 .centered3{
     padding-top: 100px;	
     padding-right: 20px;
 }
 .text-padding{
+    padding-top: 10px;
     padding-left: 65px;
 }
 .btn{
@@ -28,7 +29,7 @@
     padding-left:0px;
 }
 .p-sizing{
-    font-size:8px;
+    font-size:12px;
 }
 .mobilelogo{
     padding-right: 10px;
@@ -38,8 +39,7 @@
     font-size: 8px;
 }
 .custompic{
-    
-   /* border: 1px solid red;*/
+
   }
 
   @media only screen and (min-device-width: 750px) {
