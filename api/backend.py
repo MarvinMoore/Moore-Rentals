@@ -3,7 +3,6 @@ from flask_restful import Resource, Api, reqparse
 import pandas as pd
 import ast
 import json
-import pyodbc
 import sqlalchemy as sal
 from sqlalchemy import create_engine, text, select, Table, Column, Integer, String, MetaData
 from flask_cors import CORS
