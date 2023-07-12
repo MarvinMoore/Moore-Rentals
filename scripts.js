@@ -5,6 +5,17 @@ function sendMessage(){
   const contactElement = document.getElementById('contactus');
   contactElement.innerHTML = '<a id="ContactUs"><h3 class="fw-bold light-green fst-italic d-flex justify-content-center">Thanks for your Message!</h3></a>';
 }
+function isMobile() {
+  return window.innerWidth <= 768; // Adjust the breakpoint as per your needs
+}
+
+// Delete a column if the site is loaded on a mobile device
+function deleteGridColumn() {
+  if (isMobile()) {
+    const gridItems = document.getElementById('piccol');
+    gridItems.remove();
+  }
+}
 function updateModelOptions() {
     var selectedMake = makeSelect.value;
     
