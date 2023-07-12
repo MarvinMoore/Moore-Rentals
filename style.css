@@ -30,6 +30,9 @@
 .p-sizing{
     font-size:8px;
 }
+.mobilelogo{
+    padding-right: 10px;
+}
 .custompic{
     width: 100%;
     height: 200px;
@@ -47,6 +50,9 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
         /*border: 1px solid red;*/
+  }
+  [class*="mobilelogo"]{
+    padding-right: 0px;
   }
   [class*="centered"] {
     padding-left: 15px;		
