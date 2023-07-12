@@ -35,6 +35,7 @@
 }
 .signin{
     padding-left:10px;
+    font-size: 8px;
 }
 .custompic{
     width: 100%;
@@ -56,9 +57,10 @@
   }
   [class*="mobilelogo"]{
     padding-right: 0px;
-  }
+}
   [class*=signin]{
-    padding-left:0;
+    padding-left: 10px;
+    font-size: 16px;
   }
   [class*="centered"] {
     padding-left: 15px;		
