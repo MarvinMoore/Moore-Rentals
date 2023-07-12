@@ -118,3 +118,4 @@ function updateModelOptions() {
       carResult.appendChild(noCarsElement);
     });
 });
+deleteGridColumn();
