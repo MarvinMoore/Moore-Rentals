@@ -1,6 +1,10 @@
 var makeSelect = document.getElementById("makeSelect");
 var modelSelect = document.getElementById("modelSelect");
 var searchButton1 = document.getElementById('searchButton');
+function sendMessage(){
+  const contactElement = document.getElementById('contactus');
+  contactElement.innerHTML = '<a id="ContactUs"><h3 class="fw-bold light-green fst-italic d-flex justify-content-center">Thanks for your Message!</h3></a>';
+}
 function updateModelOptions() {
     var selectedMake = makeSelect.value;
     

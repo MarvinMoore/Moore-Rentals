@@ -46,10 +46,10 @@
        </div>
         <div class="" id="navbarNavDropdown">
           <ul class="navbar-nav">
-          <li class="nav-item">
+          <li class="nav-item dropdown">
             <a class="btn light-green" href="/aboutme" role="button"><strong>Sign In</strong></a>
            </li>
-          <li class="nav-item">
+          <li class="nav-item dropdown">
             <a class="btn" style="color:white; background-color: #0BCC8B;"href="/aboutme" role="button"><strong>Register</strong></a>
           </li>
           </ul>
@@ -63,8 +63,8 @@
               <h1 class="fw-bold heading"><span class="light-green">Massive</span> Savings with our car fleet</h1>
             <p class="p-sizing">Enjoy any car that you can imagine, within a matter of minutes.</p>
             <div>
-            <a class="btn fw-bold" style="color:white; background-color: #0BCC8B;" href="/aboutme" role="button">Book Ride</a>
-            <span class="btn-padding"><a class="btn fw-bold" style="color: white; background-color: black;" href="/aboutme" role="button">Learn More</a></span>
+            <a class="btn fw-bold" style="color:white; background-color: #0BCC8B;" href="#Rent" role="button">Book Ride</a>
+            <span class="btn-padding"><a class="btn fw-bold" style="color: white; background-color: black;" href="#AboutUs" role="button">Learn More</a></span>
             </div>
             </div>
             <div class="col centered3">
@@ -148,7 +148,7 @@
             </div>
 
         </div>
-        <div class="text-padding container-fluid" style="padding-top: 330px;">
+        <div class="text-padding container-fluid" style="padding-top: 330px;" id="contactus">
           <a id="ContactUs"><h1 class="fw-bold light-green fst-italic d-flex justify-content-center">Contact Us</h1></a>
           <div class="container-fluid">
             <div class="row" style="padding-top: 40px;">
@@ -180,7 +180,7 @@
               </div>
               <div class="row">
                 <div class="col d-flex justify-content-center">
-                  <a class="btn fw-bold btn-lg" style="color:white; background-color: #0BCC8B;" href="/aboutme" role="button">Send Message</a>
+                  <a class="btn fw-bold btn-lg" style="color:white; background-color: #0BCC8B;" onclick="sendMessage()" role="button">Send Message</a>
                 </div>
               </div>
           </div>
