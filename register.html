@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/images/logo.PNG">
+        <title>Moore Rentals</title>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/scripts.js"></script>
+        <!--<link href="assets/css/bootstrap-theme.css" rel="stylesheet"/>-->
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg bg-light" id="navbar">
+            <div class="container-fluid justify-content-center">
+               <a class="centered" href="/index.html">
+               <img src="/images/logo.PNG" alt="logo" width="52" height="54">
+               </a>
+              <h5>
+                <span style="display: block; padding-top: 8px; color: #0BCC8B;"><strong>Moore</strong></span>
+                <span class = "mobilelogo" style="display: block; color: #0BCC8B;"><strong>Rentals</strong></span>
+              </h5>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse justify-content-center nav-center" id="navbarNavDropdown">
+         <ul class="navbar-nav">
+           <li class="nav-item">
+            <a class="nav-link light-green fw-bold" href="/index.html#Home">Home</a>
+          </li>
+           <li class="nav-item">
+             <a class="nav-link light-green fw-bold" href="/index.html#AboutUs">About</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link light-green fw-bold" href="/index.html#Rent">Rent</a>
+           </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link light-green fw-bold" href="/index.html#ContactUs">Contact Us</a>
+           </li>
+         </ul>
+       </div>
+        <div class="d-flex" id="navbarNavDropdown">
+          <ul class="navbar-nav signin">
+          <li class="nav-item dropdown">
+            <a class="btn light-green" href="/login.html" role="button"><strong>Sign In</strong></a>
+           </li>
+          <li class="nav-item dropdown">
+            <a class="btn " style="color:white; background-color: #0BCC8B;"href="/register.html" role="button"><strong>Register</strong></a>
+          </li>
+          </ul>
+        </div>
+        </div> 
+         </nav>
+        </div>
+        <div class="text-padding container-fluid" style="padding-top: 100px;" id="contactus">
+          <a id="ContactUs"><h1 class="fw-bold light-green fst-italic d-flex justify-content-center">Register</h1></a>
+          <div class="container-fluid">
+            <div class="row" style="padding-top: 40px;">
+              <div class="col align-self-center justify-content-center text-left" style="padding-left: 0px;">
+                <div class="input-group input-group-lg mb-3" style="margin-left:15%; width:70%;">
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col align-self-center justify-content-center text-left" style="padding-left: 0px;">
+                <div class="input-group input-group-lg mb-3" style="margin-left:15%; width:70%;">
+                  <input type="text" class="form-control w-75" placeholder="Password" aria-label="Username">
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col d-flex justify-content-center">
+                  <a class="btn fw-bold btn-lg" style="color:white; background-color: #0BCC8B;" onclick="sendMessage()" role="button">Register</a>
+                </div>
+              </div>
+          </div>
+          <script src="/scripts.js"></script>
+          
+      </div>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+         <!-- Include all compiled plugins (below), or include individual files as needed -->
+         <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    </body>
+    <!-- Footer -->
+    <footer class="footer text-padding text-center text-lg-start" style="padding-top: 330px;">
+      <div class="container d-flex justify-content-center py-5">
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="bi bi-facebook"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="bi bi-youtube"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="bi bi-instagram"></i>
+        </button>
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+          <i class="bi bi-twitter"></i>
+        </button>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3">
+      © 2023 Copyright:
+      <a class="text-black" href="https://MooreRentals.com/">MooreRentals.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>
