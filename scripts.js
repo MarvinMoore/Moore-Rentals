@@ -45,6 +45,37 @@ function updateModelOptions() {
     }
   }
 
+function signIn(){
+  var username1 = document.getElementById('username1').value;
+  var pass1 = document.getElementById('pass1').value;
+  //Gather user+pass input fields, post -> python api to compare against users, compare pass versus hashed pass in sql db
+  const payload = {
+    username: username1,
+    password: pass1
+  };
+
+  console.log(payload)
+  const queryString = new URLSearchParams(payload).toString();
+  // Send the POST request
+  fetch(`https://KrypticsDaddy.pythonanywhere.com/login?${queryString}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams(payload)
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response
+      console.log(data)
+    })
+    .catch(error => {
+        // Handle errors
+        console.error(error);
+      });
+  }
+
+
 
 // Add an event listener to the search button
   searchButton1.addEventListener('click', () => {
